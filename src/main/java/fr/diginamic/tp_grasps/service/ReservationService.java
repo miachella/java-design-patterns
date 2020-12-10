@@ -2,13 +2,14 @@ package fr.diginamic.tp_grasps.service;
 
 import java.time.LocalDateTime;
 
-import fr.diginamic.tp_grasps.DateUtils;
 import fr.diginamic.tp_grasps.ReservationFactory;
 import fr.diginamic.tp_grasps.beans.Client;
 import fr.diginamic.tp_grasps.beans.Reservation;
 import fr.diginamic.tp_grasps.beans.TypeReservation;
 import fr.diginamic.tp_grasps.daos.ClientDao;
 import fr.diginamic.tp_grasps.daos.TypeReservationDao;
+import fr.diginamic.tp_grasps.utils.CalculUtils;
+import fr.diginamic.tp_grasps.utils.DateUtils;
 
 public class ReservationService {
 
@@ -37,13 +38,7 @@ public class ReservationService {
 		// 7) Calcul du montant total de la réservation qui dépend:
 		//    - du nombre de places
 		//    - de la réduction qui s'applique si le client est premium ou non
-		double total = type.getMontant() * nbPlaces;
-		if (client.isPremium()) {
-			reservation.setTotal(total*(1-type.getReductionPourcent()/100.0));
-		}
-		else {
-			reservation.setTotal(total);
-		}
+		CalculUtils.montantReservation(reservation, client, nbPlaces, type);
 		
 		return reservation;
 	}
