@@ -2,12 +2,12 @@ package fr.diginamic.tp_grasps.service;
 
 import java.time.LocalDateTime;
 
-import fr.diginamic.tp_grasps.ReservationFactory;
 import fr.diginamic.tp_grasps.beans.Client;
 import fr.diginamic.tp_grasps.beans.Reservation;
 import fr.diginamic.tp_grasps.beans.TypeReservation;
 import fr.diginamic.tp_grasps.daos.ClientDao;
 import fr.diginamic.tp_grasps.daos.TypeReservationDao;
+import fr.diginamic.tp_grasps.factory.ReservationFactory;
 import fr.diginamic.tp_grasps.utils.CalculUtils;
 import fr.diginamic.tp_grasps.utils.DateUtils;
 

@@ -1,5 +1,6 @@
-package fr.diginamic.tp_grasps;
+package fr.diginamic.tp_grasps.controller;
 
+import fr.diginamic.tp_grasps.Params;
 import fr.diginamic.tp_grasps.beans.Reservation;
 import fr.diginamic.tp_grasps.service.ReservationService;
 

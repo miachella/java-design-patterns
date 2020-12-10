@@ -5,6 +5,7 @@ import static org.junit.Assert.*;
 import org.junit.Test;
 
 import fr.diginamic.tp_grasps.beans.Reservation;
+import fr.diginamic.tp_grasps.controller.ReservationController;
 
 public class ReservationControllerTest {
 

@@ -1,4 +1,4 @@
-package fr.diginamic.tp_grasps;
+package fr.diginamic.tp_grasps.factory;
 
 import java.time.LocalDateTime;
 
