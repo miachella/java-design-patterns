@@ -4,6 +4,7 @@ import java.util.List;
 import java.util.Optional;
 
 import fr.diginamic.tp_grasps.beans.Client;
+import fr.diginamic.tp_grasps.beans.Reservation;
 
 public class ClientDao {
 
@@ -16,6 +17,10 @@ public class ClientDao {
 			return opt.get();
 		}
 		return null;
+	}
+	
+	public void ajouterReservation(Client client, Reservation reservation) {
+		client.getReservations().add(reservation);
 	}
 
 }
