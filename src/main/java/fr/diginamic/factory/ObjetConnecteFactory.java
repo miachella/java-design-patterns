@@ -1,8 +1,12 @@
 package fr.diginamic.factory;
 
-public class ObjetConnecteFactory {
+public class ObjetConnecteFactory implements IObjetConnecteFactory {
 	
-	public static ObjetConnecte getInstance(ObjetConnecteEnum type, double limiteVolts) {
+	public ObjetConnecte getInstance(ObjetConnecteEnum type, double limiteVolts) {
+		if(type == null) {
+			return null;
+		}
+		
 		switch (type) {
 		case TELEPHONE_PORTABLE: 
 			return new TelephonePortable(limiteVolts);
