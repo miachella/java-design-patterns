@@ -7,6 +7,19 @@ public class Service implements IElement {
 	
 	private List<IElement> list = new ArrayList<IElement>();
 
+	public List<IElement> getList() {
+		return list;
+	}
+
+	public void setList(List<IElement> list) {
+		this.list = list;
+	}
+
+	public Service(List<IElement> list) {
+		super();
+		this.list = list;
+	}
+
 	@Override
 	public double calculerSalaire() {
 		double salaire = 0;
